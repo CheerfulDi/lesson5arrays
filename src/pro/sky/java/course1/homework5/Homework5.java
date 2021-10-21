@@ -1,6 +1,7 @@
 package pro.sky.java.course1.homework5;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Homework5 {
 
@@ -76,7 +77,7 @@ public class Homework5 {
 
         System.out.println();
 
-        // ПОВЫШЕННАЯ СЛОЖНОСТЬ Задание 6
+        // Повышенная сложность. Задание 6
 
 
         int [] figures = {5, 4, 3, 2, 1};
@@ -92,32 +93,33 @@ public class Homework5 {
 
         System.out.println();
 
-        // ПОВЫШЕННАЯ СЛОЖНОСТЬ Задание 7
+        // Повышенная сложность. Задание 7
         
-        int [] sample = {3, 6, 7};
+        int [] sample = {5, 8, 2, 3, 9};
         System.out.println(Arrays.toString(sample));
 
-        for (int i = sample.length - 1; i >= 0; i++) {
+        int w = sample.length;
+
+        for (int i = 0; i <= w/2; i++) {
+            int temp = sample [w-i-1];
+            sample [w-i-1] = sample[i];
+            sample[i] = temp;
 
         }
         System.out.println(Arrays.toString(sample));
 
+        System.out.println();
+
+        /* Очень сложно. Задания 8 и 9 - планирую осилить....
+
+        int [] hard = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
+
+            }*/
 
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-    public static int[] generateRandomArray() {
+        public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
         int[] arr = new int[30];
         for (int i = 0; i < arr.length; i++) {
